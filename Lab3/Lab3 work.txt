@@ -1,0 +1,34 @@
+11111111.00000000.00000000.00000000  - class A
+-network- ----------host-----------
+11111111.11111111.00000000.00000000  - class B
+-----network----- -----host------
+11111111.11111111.11111111.00000000 - class c
+---------network---------- --host--
+
+
+Lab 3
+activity - class - B subnetting for 30000 devices and implement it on packet tracer
+
+no. of devices: 30,000
+class B - 11111111.11111111.00000000.00000000
+
+here, subnetting will give us: 2^15 = 32768 is the closest to 30000
+so we will change 1 bit reduce the available bits to 15:
+11111111.11111111.10000000.00000000
+
+here, no. of subnets => 2^(no. of changed bits) = 2^1 = 2
+and no. of hosts per subnet => 2^(unchanged bits) = 2^15 = 32768
+
+ SN1
+172.168.0.0
+	.
+	.
+	.
+172.168.127.255
+
+ SN2
+172.168.128.0
+	.
+	.
+	.
+172.168.255.255
